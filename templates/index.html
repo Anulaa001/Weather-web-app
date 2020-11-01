@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Weather App</title>
+</head>
+
+<body style="background-color: rgb(58, 114, 189); ">
+  <div
+    style="width:400px; height: 400px; margin: 20% auto; background-color: white; display: flex;  align-items: center; flex-direction: column;border-radius: 10px;box-shadow: 0px 6px 15px 1px rgba(0,0,0,0.75);">
+    <h1 style="color: rgb(19, 8, 49); font-size: 40px; ">Prognoza pogody</h1><br>
+    <br>
+
+    <form style="display: flex; justify-content: center;align-items: center; flex-direction: column;font-size: 20px; "
+      action="{{ url_for('render_results') }}" method="post">
+      <i class="fa fa-home" style="font-size:27px; align-self: flex-start;">Miasto:</i>
+      <br>
+      <input style="width: 300px; height: 30px; border-radius: 10px; margin-top: -10px; padding-left: 15px;" type="text"
+        name="city"><br>
+      <input
+        style="margin:10px; background-color:  rgb(58, 114, 189); color:whitesmoke; width:100px;height:30px;border-radius: 10px;box-shadow: 0px 6px 15px -6px rgba(0,0,0,0.75);"
+        type="submit" value="Sprawdź">
+    </form>
+  </div>
+
+</body>
+
+</html>
